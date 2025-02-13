@@ -1,0 +1,9 @@
+/home/dmitry/Рабочий стол/Github/pucch-f2/build/CMakeFiles/pucch_f2.dir
+/home/dmitry/Рабочий стол/Github/pucch-f2/build/CMakeFiles/edit_cache.dir
+/home/dmitry/Рабочий стол/Github/pucch-f2/build/CMakeFiles/rebuild_cache.dir
+/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/matrix/CMakeFiles/matrix.dir
+/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/matrix/CMakeFiles/edit_cache.dir
+/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/matrix/CMakeFiles/rebuild_cache.dir
+/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/avx_wrap/CMakeFiles/avx_wrap.dir
+/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/avx_wrap/CMakeFiles/edit_cache.dir
+/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/avx_wrap/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libavx_wrap.a CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o
+/usr/bin/ranlib libavx_wrap.a
