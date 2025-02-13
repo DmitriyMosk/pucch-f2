@@ -69,10 +69,11 @@ This project simulates the performance of a block code using a generator matrix 
 ```sh
 ./run.sh <sigma_start> <sigma_end> <sim_iterations | 0 - if force simulation> <optimize mode = {1,2,3}>
 ```
-<optimize mode> 
-1 - Стандартный метод
-2 - Регуляризация Тихонова + градиенты
-3 - 2, но с кешированием
+#### <optimize mode> 
+    
+1. Стандартный метод
+2. Регуляризация Тихонова + градиенты
+3. 2, но с кешированием
 
 Попробуйте качественно объяснить ход отснятых вами кривых. Почему код (20, 2)
 гораздо более помехоусточив чем (20, 11)
