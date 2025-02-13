@@ -60,3 +60,13 @@ This project simulates the performance of a block code using a generator matrix 
 ```sh
    ./run.sh <sigma_start> <sigma_end> <sim_iterations | 0 - if force simulation>
 ```
+
+### !!!! 3.1 Additional tasks
+
+Замерьте время работы блок-декодера. Попробуйте максимально уменьшить время
+используя различные приемы.
+
+```sh
+./run.sh <sigma_start> <sigma_end> <sim_iterations | 0 - if force simulation> <optimized | (true | false)>
+```
+
