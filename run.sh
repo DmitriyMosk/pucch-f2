@@ -29,6 +29,6 @@ if [ "$SIM_ITERATIONS" -gt 0 ]; then
     python3 -m venv .venv
     source .venv/bin/activate
     pip install --quiet pandas matplotlib
-    python ./graphics.py
+    python ./graphics.py "$SIM_OPT_MODE"
     deactivate
 fi
