@@ -73,15 +73,15 @@ src/libs/matrix/CMakeFiles/matrix.dir/src/matrix.cpp.o: src/libs/matrix/CMakeFil
 src/libs/matrix/CMakeFiles/matrix.dir/src/matrix.cpp.o: /home/dmitry/Рабочий\ стол/Github/pucch-f2/src/libs/matrix/src/matrix.cpp
 src/libs/matrix/CMakeFiles/matrix.dir/src/matrix.cpp.o: src/libs/matrix/CMakeFiles/matrix.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/dmitry/Рабочий стол/Github/pucch-f2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/libs/matrix/CMakeFiles/matrix.dir/src/matrix.cpp.o"
-	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/matrix" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/matrix/CMakeFiles/matrix.dir/src/matrix.cpp.o -MF CMakeFiles/matrix.dir/src/matrix.cpp.o.d -o CMakeFiles/matrix.dir/src/matrix.cpp.o -c "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/matrix/src/matrix.cpp"
+	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/matrix" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/matrix/CMakeFiles/matrix.dir/src/matrix.cpp.o -MF CMakeFiles/matrix.dir/src/matrix.cpp.o.d -o CMakeFiles/matrix.dir/src/matrix.cpp.o -c "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/matrix/src/matrix.cpp"
 
 src/libs/matrix/CMakeFiles/matrix.dir/src/matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/matrix.dir/src/matrix.cpp.i"
-	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/matrix" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/matrix/src/matrix.cpp" > CMakeFiles/matrix.dir/src/matrix.cpp.i
+	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/matrix" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/matrix/src/matrix.cpp" > CMakeFiles/matrix.dir/src/matrix.cpp.i
 
 src/libs/matrix/CMakeFiles/matrix.dir/src/matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/matrix.dir/src/matrix.cpp.s"
-	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/matrix" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/matrix/src/matrix.cpp" -o CMakeFiles/matrix.dir/src/matrix.cpp.s
+	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/matrix" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/matrix/src/matrix.cpp" -o CMakeFiles/matrix.dir/src/matrix.cpp.s
 
 # Object files for target matrix
 matrix_OBJECTS = \

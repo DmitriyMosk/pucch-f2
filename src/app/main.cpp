@@ -41,12 +41,12 @@
 #include "orchest.hpp"
 
 void print_usage(const char* prog_name) {
-    std::cerr << "Usage: " << prog_name << " <sigma_start> <sigma_end> <sim_iterations | 0 for force test>\n";
+    std::cerr << "Usage: " << prog_name << " <sigma_start> <sigma_end> <sim_iterations | 0 for force test> <optimize mode = {1,2,3}\n";
     std::cerr << "Example: " << prog_name << " 0.01 1.5 1000 1\n";
 }
 
 int main(int argc, char* argv[]) {
-    if (argc != 4) {
+    if (argc != 5) {
         print_usage(argv[0]);
         return EXIT_FAILURE;
     }
@@ -56,8 +56,15 @@ int main(int argc, char* argv[]) {
     // Читаем аргументы
     std::istringstream ss1(argv[1]), ss2(argv[2]), ss3(argv[3]), ss4(argv[4]);
 
-    if (!(ss1 >> orch_ini.start) || !(ss2 >> orch_ini.end) || !(ss3 >> orch_ini.sim_iterations) || (!ss4 >> orch_ini.opt_mode) || 
-        orch_ini.start < 0 || orch_ini.end <= orch_ini.start || orch_ini.sim_iterations < 0 || orch_ini.opt_mode < 1 || orch_ini.opt_mode > 3) {
+    if (!(ss1 >> orch_ini.start) || 
+        !(ss2 >> orch_ini.end) || 
+        !(ss3 >> orch_ini.sim_iterations) || 
+        !(ss4 >> orch_ini.opt_mode) || 
+        orch_ini.start < 0 || 
+        orch_ini.end <= orch_ini.start || 
+        orch_ini.sim_iterations < 0 || 
+        orch_ini.opt_mode < 1 || 
+        orch_ini.opt_mode > 3) {
         std::cerr << "Invalid arguments provided!\n";
         print_usage(argv[0]);
         return EXIT_FAILURE;

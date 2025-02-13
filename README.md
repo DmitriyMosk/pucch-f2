@@ -50,7 +50,7 @@ This project simulates the performance of a block code using a generator matrix 
 
 - **Installing Pandas and Matplotlib**:
     ```bash
-    pip3 install pandas matplotlib
+    pip3 install -r requirements.txt
     ```
 
 ---

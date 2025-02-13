@@ -73,15 +73,15 @@ src/libs/avx_wrap/CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o: src/libs/avx_wrap/
 src/libs/avx_wrap/CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o: /home/dmitry/Рабочий\ стол/Github/pucch-f2/src/libs/avx_wrap/src/avx_wrap.cpp
 src/libs/avx_wrap/CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o: src/libs/avx_wrap/CMakeFiles/avx_wrap.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/dmitry/Рабочий стол/Github/pucch-f2/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/libs/avx_wrap/CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o"
-	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/avx_wrap" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/avx_wrap/CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o -MF CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o.d -o CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o -c "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/avx_wrap/src/avx_wrap.cpp"
+	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/avx_wrap" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/libs/avx_wrap/CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o -MF CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o.d -o CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.o -c "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/avx_wrap/src/avx_wrap.cpp"
 
 src/libs/avx_wrap/CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.i"
-	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/avx_wrap" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/avx_wrap/src/avx_wrap.cpp" > CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.i
+	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/avx_wrap" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/avx_wrap/src/avx_wrap.cpp" > CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.i
 
 src/libs/avx_wrap/CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.s"
-	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/avx_wrap" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/avx_wrap/src/avx_wrap.cpp" -o CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.s
+	cd "/home/dmitry/Рабочий стол/Github/pucch-f2/build/src/libs/avx_wrap" && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dmitry/Рабочий стол/Github/pucch-f2/src/libs/avx_wrap/src/avx_wrap.cpp" -o CMakeFiles/avx_wrap.dir/src/avx_wrap.cpp.s
 
 # Object files for target avx_wrap
 avx_wrap_OBJECTS = \

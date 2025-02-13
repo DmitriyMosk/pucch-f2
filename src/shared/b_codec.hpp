@@ -18,7 +18,7 @@ namespace pucch_f2 {
 
     // v2 codec
     std::unique_ptr<char[]> v2_decode(const float* data, size_t len, size_t code_size);
-    std::unique_ptr<char[]> v2_decode_with_cache(const float* data, size_t len, size_t code_size);
+    std::unique_ptr<char[]> v3_decode(const float* data, size_t len, size_t code_size);
 }
 
 #endif 

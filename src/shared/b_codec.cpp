@@ -13,9 +13,11 @@
 namespace pucch_f2 { 
     Matrix<char>* CODEC_MATRIX = nullptr;
 
-    Matrix<char> ENCODE_MATRIX_CACHE;
+    std::unique_ptr<Matrix<char>> ENCODE_MATRIX_CACHE;
     std::vector<std::unique_ptr<char[]>> PRECOMPUTED_PROBABLES; 
     std::vector<float> SCORE_CACHE;
+
+    void codec_precompute(size_t code_size); 
 
     void codec_generating_matrix_read() { 
         if (CODEC_MATRIX) {
@@ -51,8 +53,12 @@ namespace pucch_f2 {
             }
         }
 
-        codec_precompute();
+        size_t block_sizes[] = {2, 4, 6, 8, 11}; 
 
+        for (size_t bs : block_sizes) { 
+            codec_precompute(bs);
+        }
+    
         fclose(file_matrix);
     }
     
@@ -187,10 +193,10 @@ namespace pucch_f2 {
 
         for (size_t i = 0; i < num_comb; ++i) {
             auto& probable = PRECOMPUTED_PROBABLES[i];
-            auto ci = std::unique_ptr<char[]>(ENCODE_MATRIX_CACHE.gf2_multRowVec(probable.get(), code_size));
+            auto ci = std::unique_ptr<char[]>(ENCODE_MATRIX_CACHE->gf2_multRowVec(probable.get(), code_size));
 
             float score = 0.0f;
-            for (size_t j = 0; j < ENCODE_MATRIX_CACHE.Rows(); ++j) {
+            for (size_t j = 0; j < ENCODE_MATRIX_CACHE->Rows(); ++j) {
                 score += static_cast<float>((ci[j] == -1) ? 0 : 1) * data[j];
             }
 
@@ -202,17 +208,17 @@ namespace pucch_f2 {
     }
 
     void codec_precompute(size_t code_size) {
-        ENCODE_MATRIX_CACHE = CODEC_MATRIX->truncate(GENERATING_MATRIX_ROWS, code_size);
-
+        ENCODE_MATRIX_CACHE = std::make_unique<Matrix<char>>(CODEC_MATRIX->truncate(GENERATING_MATRIX_ROWS, code_size));
+        
         size_t num_comb = 1 << code_size;
         PRECOMPUTED_PROBABLES.resize(num_comb);
         SCORE_CACHE.resize(num_comb, 0.0f);
-
+    
         for (size_t i = 0; i < num_comb; ++i) {
             PRECOMPUTED_PROBABLES[i] = std::make_unique<char[]>(code_size);
             for (size_t j = 0; j < code_size; ++j) {
                 PRECOMPUTED_PROBABLES[i][j] = (i >> j) & 1;
             }
         }
-    }
+    }   
 }

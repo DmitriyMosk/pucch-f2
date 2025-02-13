@@ -9,7 +9,7 @@
 #include "orchest.hpp"
 #include "b_codec.hpp"
 
-void _launch_codec_orchesting(metrics_t &mt, const std::vector<float>& noise_vector); 
+void _launch_codec_orchesting(metrics_t &mt, const std::vector<float>& noise_vector, int opt_mode); 
 void _generate_data(size_t len, std::unique_ptr<char[]>& data); 
 int _validate_data(size_t len, const char* data_src, const char* data_dest);
 void _print_metrics(const metrics_t &mt);
@@ -33,7 +33,7 @@ void orchest_init(ProccessOrchest &orchest_ini) {
 
         mt.di = std::make_unique<char[]>(mt.src_msg_len);
         _generate_data(mt.src_msg_len, mt.di);
-        _launch_codec_orchesting(mt, noise_vector); 
+        _launch_codec_orchesting(mt, noise_vector, orchest_ini.opt_mode); 
 
         if (mt.require_print) { 
             _print_metrics(mt); 
@@ -107,7 +107,7 @@ void _launch_codec_orchesting(metrics_t &mt, const std::vector<float>& noise_vec
     } else if (mode == 2) { 
         mt.di_decoded = pucch_f2::v2_decode(mt.di_encoded_noised.get(), mt.src_msg_len, mt.src_msg_len);
     } else {
-        mt.di_decoded = pucch_f2::v2_decode_with_cache(mt.di_encoded_noised.get(), mt.src_msg_len, mt.src_msg_len);
+        mt.di_decoded = pucch_f2::v3_decode(mt.di_encoded_noised.get(), mt.src_msg_len, mt.src_msg_len);
     }
     end = std::chrono::high_resolution_clock::now(); 
     mt.decoding_diff += std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
